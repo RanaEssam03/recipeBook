@@ -12,15 +12,10 @@ const routes: Routes = [
   //       (m) => m.RecipesRoutingModule
   //     ),
   // },
+ 
 
   {
-    path: '',
-    redirectTo:'test',
-    pathMatch:'full'
-  },
-
-  {
-    path:'test',
+    path:'recipes',
     loadChildren: () =>
       import('./recipes/recipes.module').then((m) => m.RecipesModule),
   }

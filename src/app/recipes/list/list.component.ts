@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ElementRef, HostListener, Input, OnInit, ViewChild } from "@angular/core";
 
 @Component ({
   selector: "app-list",
@@ -7,8 +7,16 @@ import { Component } from "@angular/core";
 })
 
 
-export class ListComponent{
-  list: string[]= ['first', 'second','first', 'second','first', 'second'];
+export class ListComponent  {
 
+ @Input() itemsList!: [];
+
+  @ViewChild('anotherComponent')
+  anotherComponent!: ElementRef;
+
+  getData(){
+    this.itemsList = JSON.parse(localStorage.getItem('items')!)
+
+  }
 
 }

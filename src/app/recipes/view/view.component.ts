@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 
 @Component ({
   selector: "view",
@@ -7,7 +7,19 @@ import { Component } from "@angular/core";
 })
 
 
-export class  ViewComponent{
+export class  ViewComponent implements OnInit{
+  ngOnInit(): void {
+    this.items = JSON.parse(localStorage.getItem('items')!)
+  }
+  hide: boolean = false;
+  items!: [];
 
+  onAddItem(items: []){
+    this.items = items;
+  }
+
+  showForm(){
+   this.hide = ! this.hide;
+ }
 
 }

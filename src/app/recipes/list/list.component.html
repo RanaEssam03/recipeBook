@@ -1,8 +1,15 @@
-<div class="card" style="width: 18rem;" *ngFor= "let c of list ">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary" >Go somewhere</a>
+<div class="container text-center d-flex justify-content-center ">
+  <div class="row">
+    <div class=" col-md-6" *ngFor="let item of itemsList">
+      <div class="card rounded-5 mt-5 p-4  text-center d-flex justify-content-center " style="width: 18rem;">
+        <!-- <div class = "h-25"> <img [src]= "item['image']" class="card-img-top " alt="..."> </div> -->
+        <div class = "h-25"> <img src= "https://imgs.search.brave.com/TDyYeH-TONY6yR3OWO0miVXILOjTTcR1rFc1aXiM3kY/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvNjgy/OTY4ODQ2L3Bob3Rv/L2hvbWVtYWRlLWNo/ZWVzZWNha2UuanBn/P3M9NjEyeDYxMiZ3/PTAmaz0yMCZjPVFS/NmV2Z2J0NjBTS2FQ/cFVXa3BVcUY2Umpz/UmVIcFByZjB5TDFX/ZG4xdnM9" class="card-img-top " alt="..."> </div>
+        <div class="card-body">
+          <h5 class="card-title">{{item['name']}}</h5>
+          <p class="card-text">{{item['details']}}</p>
+          <a href="#" class="btn btn-danger">Go somewhere</a>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

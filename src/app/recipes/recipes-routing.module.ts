@@ -6,9 +6,9 @@ import { AddComponent } from './add/add.component';
 
 const routes: Routes = [
   // {path:'', redirectTo:'recipes', pathMatch:'full'},
-  { path: 'recipes', component: ListComponent },
+  { path: 'list_recipes', component: ListComponent },
   { path: 'add-recipes', component: AddComponent },
-  { path: 'view-recipes/:id', component: ViewComponent },
+  { path: 'view-recipes', component: ViewComponent },
   { path: 'edite-recipe/:id', component: AddComponent },
 ];
 @NgModule({

@@ -1,0 +1,27 @@
+<form  class=" border  bg-light-subtle border-dark rounded-5"  (submit)="onSubmit()"  [formGroup] ="formGroup">
+  <div class="mb-3  ">
+    <label for="exampleInputEmail1" class="form-label">Recipe Name</label>
+    <input
+      type="text"
+      class="form-control bg-dark-subtle "
+     formControlName = "name"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="details" class="form-label">Details</label>
+    <input type="text" class="form-control bg-dark-subtle " formControlName="details" />
+  </div>
+  <div class="mb-3">
+    <label for="image" class="form-label">Image URL</label>
+    <input type="text" class="form-control bg-dark-subtle " formControlName="image" />
+  </div>
+
+
+  <!-- <div class="input-group mb-3">
+    <label class="input-group-text" for="inputGroupFile01">Upload</label>
+    <input type="file" class="form-control bg-dark-subtle " formControlName="image">
+  </div> -->
+
+  <button type="submit" class="btn btn-danger">Submit</button>
+
+</form>
